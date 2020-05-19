@@ -1,8 +1,3 @@
-<?php
-session_start();
-$hakujitsu = "時には誰かを知らず知らずのうちに傷つけてしまったり";
-$_SESSION['hakujitsu'] = $hakujitsu;
-?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -19,11 +14,18 @@ $_SESSION['hakujitsu'] = $hakujitsu;
     </header>
 
     <main>
-        <h2>Practice</h2>
+        <h2>PHP</h2>
         <pre>
-        <p>セッションに値を保存しました。次のページに移動してみましょう</p>
-        &raquo; <a href="page02.php">page02へ</a>
-        </pre>
+            <?php
+            $file = file_get_contents('https://h2o-space.com/feed/json/');
+            $json = json_decode($file);
+
+            foreach($json->items as $item):
+
+            ?>
+        ・<a href="<?php echo $item->url; ?>"><?php echo $item->title; ?></a>
+            <?php endforeach; ?>   
+    </pre>
     </main>
 
 </body>

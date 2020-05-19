@@ -16,7 +16,7 @@
     <main>
         <h2>Practice</h2>
         <pre>
-          お名前: <?php echo htmlspecialchars($_REQUEST['my_name'], ENT_QUOTES); ?>
+          お名前:<?php echo htmlspecialchars($_POST['my_name'],ENT_QUOTES); ?>
         </pre>
     </main>
 

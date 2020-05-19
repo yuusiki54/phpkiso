@@ -16,8 +16,8 @@
     <main>
         <h2>Practice</h2>
         <pre>
-            変数の値 : <?php echo $value; ?>
-            cookieの値 : <?php echo $_COOKIE['save_message'];?>
+            変数の値: <?php echo $value; ?>
+           cookieの値: <?php echo $_COOKIE['save_message']; ?>
         </pre>
     </main>
 

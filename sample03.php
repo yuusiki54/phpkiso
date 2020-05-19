@@ -17,14 +17,9 @@
         <h2>Practice</h2>
         <pre>
             <?php
-            $file = file_get_contents('https://h2o-space.com/feed/json/');
-            
-            $json = json_decode($file);
-
-            foreach($json->items as $item):
+            $today = new DateTime();
+            echo $today->format('G時 i分 s秒');
             ?>
-            ・<a href="<?php echo $item->url; ?>"><?php echo $item->title; ?></a>
-            <?php endforeach; ?>
         </pre>
     </main>
 

@@ -17,7 +17,7 @@
     <main>
         <h2>Practice</h2>
         <pre>
-           <?php echo $_SESSION['session_message']; ?>
+           <?php echo $_SESSION['hakujitsu'] ?>
         </pre>
     </main>
 
